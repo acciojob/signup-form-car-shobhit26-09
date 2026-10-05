@@ -1,16 +1,66 @@
 <!DOCTYPE html>
-
-<html>
-
+<html lang="en">
 <head>
-	<link rel="stylesheet" href="styles.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Create your account</title>
+  <link rel="stylesheet" href="styles.css">
 </head>
-
 <body>
-	<!-- the entire body must be written by student -->
-    <script type="text/javascript" src="./script.js">
-</script>
-
+  <main class="page-shell">
+    <section class="signup-card" aria-labelledby="form-title">
+      <p class="eyebrow">YOUR NEXT CHAPTER</p>
+      <h1 id="form-title">Create your account</h1>
+      <p class="intro">A few details and you're ready to go.</p>
+      <form action="#" method="post">
+        <div class="field-grid">
+          <div class="field">
+            <label for="name">Name</label>
+            <input id="name" name="name" type="text" placeholder="Name" required>
+          </div>
+          <div class="field">
+            <label for="email">Email</label>
+            <input id="email" name="email" type="email" placeholder="Email" required>
+          </div>
+          <fieldset class="field gender-field">
+            <legend>Gender</legend>
+            <div class="choice-row">
+              <label class="choice" for="gender_m"><input id="gender_m" name="gender" type="radio" value="male" required> Male</label>
+              <label class="choice" for="gender_f"><input id="gender_f" name="gender" type="radio" value="female"> Female</label>
+            </div>
+          </fieldset>
+          <div class="field">
+            <label for="cars">Car Brands</label>
+            <select id="cars" name="cars" required>
+              <option value="" selected disabled>--Please choose an option--</option>
+              <option value="toyota">Toyota</option>
+              <option value="honda">Honda</option>
+              <option value="hyundai">Hyundai</option>
+              <option value="other">Other</option>
+            </select>
+          </div>
+          <div class="field">
+            <label for="age">Age</label>
+            <input id="age" name="age" type="number" placeholder="Age" min="1" max="120" required>
+          </div>
+          <div class="field">
+            <label for="dob">DOB</label>
+            <input id="dob" name="dob" type="date" required>
+          </div>
+          <div class="field">
+            <label for="tel">Phone Number <span>(optional)</span></label>
+            <input id="tel" name="tel" type="tel" placeholder="xxx-xxx-xxxx">
+          </div>
+          <div class="field">
+            <label for="password">Password</label>
+            <input id="password" name="password" type="password" placeholder="Password" required>
+          </div>
+        </div>
+        <label class="tos-choice" for="tos"><input id="tos" name="tos" type="checkbox" required> <span>I agree to the TOS</span></label>
+        <button type="submit">Create account <span aria-hidden="true">→</span></button>
+      </form>
+    </section>
+  </main>
+  <script type="text/javascript" src="./script.js"></script>
 </body>
-
 </html>
